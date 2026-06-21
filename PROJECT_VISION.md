@@ -15,8 +15,8 @@ LangGraph
 LangChain
 
 Models:
-Gemini 2.5 Pro
-Gemini 2.5 Flash
+Gemini 3.5 Flash
+Gemini 3.1 Flash-Lite
 
 State:
 LangGraph State

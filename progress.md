@@ -8,12 +8,12 @@ We have established the core reasoning pipeline that converts raw algorithmic pr
 
 ### Key Features Implemented
 1. **Pydantic Validation Layer**: Structured schemas enforce strict output types for each reasoning agent step.
-2. **Central LLM Fallback (Service Layer)**: Centralized orchestration for Gemini API execution. Automatically switches from `gemini-2.5-pro` to `gemini-2.5-flash` (or vice-versa) when technical issues (rate limits/quota limits/timeouts) arise.
+2. **Central LLM Fallback (Service Layer)**: Centralized orchestration for Gemini API execution. Automatically switches from `gemini-3.5-flash` to `gemini-3.1-flash-lite` (or vice-versa) when technical issues (rate limits/quota limits/timeouts) arise.
 3. **Reasoning Graph (LangGraph)**:
-   - **Input Classification Node**: Uses Gemini 2.5 Flash to filter out casual conversations, garbage input, or general programming queries.
-   - **Problem Understanding Node**: Uses Gemini 2.5 Pro to break down categories, inputs, outputs, constraints, edge cases, and algorithmic observations.
-   - **Solution Planner Node**: Uses Gemini 2.5 Pro to design optimal algorithms and complexes without writing code.
-   - **Code Architect Node**: Uses Gemini 2.5 Pro to write clean, PEP8, modular, commented Python implementation.
+   - **Input Classification Node**: Uses Gemini 3.1 Flash-Lite to filter out casual conversations, garbage input, or general programming queries.
+   - **Problem Understanding Node**: Uses Gemini 3.5 Flash to break down categories, inputs, outputs, constraints, edge cases, and algorithmic observations.
+   - **Solution Planner Node**: Uses Gemini 3.5 Flash to design optimal algorithms and complexes without writing code.
+   - **Code Architect Node**: Uses Gemini 3.5 Flash to write clean, PEP8, modular, commented Python implementation.
    - **Final Output Node**: Consolidates state variables into a structured output payload.
 4. **FastAPI Web Server**: Exposes REST endpoints to query the workflow from client interfaces.
 

@@ -90,8 +90,8 @@ class ModelService:
                 raise fallback_err
 
 # Instantiate standard services defined by the system requirements
-# Flash-first (with Pro fallback) for lightweight tasks (Input Classification)
+# Flash-lite-first (with Flash fallback) for lightweight tasks (Input Classification)
 flash_service = ModelService(primary_model="gemini-3.1-flash-lite", fallback_model="gemini-3.5-flash")
 
-# Pro-first (with Flash fallback) for heavy cognitive/reasoning tasks (Understanding, Planning, Architecture)
+# Flash-first (with Flash-lite fallback) for heavy cognitive/reasoning tasks (Understanding, Planning, Architecture)
 pro_service = ModelService(primary_model="gemini-3.5-flash", fallback_model="gemini-3.1-flash-lite")
